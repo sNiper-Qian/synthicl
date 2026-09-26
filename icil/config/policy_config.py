@@ -1,0 +1,53 @@
+from dataclasses import dataclass
+@dataclass
+class PolicyConfig:
+    n_encoder_layers: int = 4
+    dim_model: int = 16
+    dim_feedforward: int = 64
+    n_heads: int = 4
+    dropout: int = 0.1
+    pre_norm: bool = False
+    feedforward_activation: str = "relu"
+    obs_dim: int = 2
+    action_dim: int = 2
+    is_vae_encoder: bool = False
+    concate_pos_embed: bool = False
+    pooling_strategy: str = "cls"
+    decoder_type: str = "mlp"
+    vision_backbone: str = "resnet18"
+    dino_repo: str = ""
+    dino_weights: str = ""
+    replace_final_stride_with_dilation: bool = False
+    pretrained_backbone_weights: str = "ResNet18_Weights.IMAGENET1K_V1"
+    image_size: tuple = (112, 112)
+    image_channels: int = 3
+    action_channels: int = 2
+    patch_size: int = 8
+    code_len: int = 4
+    num_codes: int = 4
+    # Noise scheduler.
+    noise_scheduler_type: str = "DDIM"
+    num_train_timesteps: int = 100
+    num_inference_timesteps: int = 64
+    time_sampling_mode: str = "beta"
+    time_sampling_alpha: float = 1.5
+    time_sampling_beta: float = 1.0
+    time_min: float = 0.001
+    time_max: float = 0.999
+    action_time_sampling_mode: str = "beta"
+    action_time_sampling_alpha: float = 1.5
+    action_time_sampling_beta: float = 1.0
+    action_time_min: float = 0.001
+    action_time_max: float = 0.999
+    image_time_sampling_mode: str = "beta"
+    image_time_sampling_alpha: float = 1.5
+    image_time_sampling_beta: float = 1.0
+    image_time_min: float = 0.001
+    image_time_max: float = 0.999
+    beta_schedule: str = "squaredcos_cap_v2"
+    beta_start: float = 0.0001
+    beta_end: float = 0.02
+    prediction_type: str = "epsilon"
+    clip_sample: bool = True
+    clip_sample_range: float = 1.0
+    pretrained_pose_estimator_path: str = ""

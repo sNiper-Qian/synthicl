@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthicl"
+version = "0.1.0"
+description = "Training code for SynthICL"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "diffusers",
+    "einops",
+    "h5py",
+    "numpy",
+    "timm",
+    "torch>=2.5",
+    "torchvision>=0.20",
+    "wandb",
+]
+
+[tool.setuptools.packages.find]
+include = ["icil*"]
