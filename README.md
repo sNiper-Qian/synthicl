@@ -4,7 +4,7 @@
   <img src="media/cover.png" alt="SynthICL overview" width="700">
 </p>
 
-Official training code for **SynthICL**, an RGB-only in-context imitation-learning policy trained on synthetic pseudo-demonstrations.
+Official training code for **SynthICL**, accepted at the **Conference on Robot Learning (CoRL) 2026**. 
 
 - [Project page](https://synth-icl.github.io/)
 - [Paper](https://arxiv.org/abs/2606.08154)
@@ -106,10 +106,10 @@ Every run creates `CHECKPOINT_DIR/<run-name>/` containing:
 ## Citation
 
 ```bibtex
-@article{qian2026synthicl,
+@inproceedings{qian2026synthicl,
   title   = {SynthICL: Scalable In-context Imitation Learning with Synthetic Data},
   author  = {Qian, Cheng and Fan, Ruomeng and Ren, Yifei and Wang, Yilong and Johns, Edward},
-  journal = {arXiv preprint arXiv:2606.08154},
+  booktitle = {Conference on Robot Learning (CoRL)},
   year    = {2026}
 }
 ```
